@@ -10,7 +10,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
      ```conf
      listen_addresses = '*'
      ```
-   - ![*arquivo postgresql.conf*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/postgresql.png)
+     ![*arquivo postgresql.conf*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/postgresql.png)
 
 2. **Editar o arquivo `pg_hba.conf`**:
    - Abra o arquivo `pg_hba.conf` no mesmo diretório.
@@ -18,7 +18,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
      ```conf
      host    all             all             0.0.0.0/0            md5
      ```
-   - ![*arquivo pg_hba.conf*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/pg_hba.png)
+     ![*arquivo pg_hba.conf*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/pg_hba.png)
 
 3. **Reiniciar o PostgreSQL**:
    - Reinicie o serviço PostgreSQL para aplicar as mudanças.
@@ -28,7 +28,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
 1. **Adicionar Caminho do `psql`**:
    - Abra as Configurações do Sistema, vá para "Variáveis de Ambiente" e edite a variável `Path`.
    - Adicione o caminho do diretório `bin` do PostgreSQL, algo como `C:\Program Files\PostgreSQL\<versão>\bin`.
-   - ![*Janelas Vaveis de ambienter*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/system_variables.png)
+     ![*Janelas Vaveis de ambienter*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/system_variables.png)
 
 ## Passo 3: Configurar o ngrok
 
@@ -36,14 +36,14 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
    - Baixe ngrok em [ngrok.com](https://ngrok.com/), crie uma conta e valide a identidade.
    - ![*site*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_site.png)
    - Abra o executável ngrok como administrador.
-   - ![*arquivo.exe*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_exe.png)
+     ![*arquivo.exe*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_exe.png)
 
 2. **Autenticar ngrok**:
    - No Prompt de Comando, autentique o ngrok com o token da sua conta, é possível pegar o token na página [dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken) :
      ```sh
      ngrok authtoken <seu_token_ngrok>
      ```
-   - ![*seção de autenticação no site*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_token.png)
+     ![*seção de autenticação no site*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_token.png)
 
 3. **Expor a Porta do PostgreSQL**:
    - Execute o seguinte comando para expor a porta 5432 do PostgreSQL:
@@ -51,7 +51,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
      ngrok tcp 5432
      ```
    - ngrok fornecerá um endereço público, como `tcp://0.tcp.sa.ngrok.io:XXXXX`.
-   - ![*porta pública pelo ngrok*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_connection.png)
+     ![*porta pública pelo ngrok*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_connection.png)
 
 ## Passo 4: Testar a Conexão com o PostgreSQL
 
@@ -73,6 +73,6 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
    - **Nome do Banco de Dados**: O nome do seu banco de dados PostgreSQL.
    - **Nome de Usuário**: Seu usuário PostgreSQL.
    - **Senha**: A senha do seu usuário PostgreSQL.
-   - *Inserir imagem 8 aqui*
+     ![*Postgresql no Looker*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/looker_studio_postgresql.png)
 
 Seguindo esses passos, você conseguirá configurar e expor seu banco de dados PostgreSQL local via ngrok e conectá-lo ao Looker Studio para criar seus relatórios e dashboards.
