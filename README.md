@@ -10,7 +10,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
      ```conf
      listen_addresses = '*'
      ```
-   - *Inserir imagem 1 aqui*
+   - ![*arquivo postgresql.conf*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/postgresql.png)
 
 2. **Editar o arquivo `pg_hba.conf`**:
    - Abra o arquivo `pg_hba.conf` no mesmo diretório.
@@ -18,7 +18,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
      ```conf
      host    all             all             0.0.0.0/0            md5
      ```
-   - *Inserir imagem 2 aqui*
+   - ![*arquivo pg_hba.conf*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/pg_hba.png)
 
 3. **Reiniciar o PostgreSQL**:
    - Reinicie o serviço PostgreSQL para aplicar as mudanças.
@@ -28,7 +28,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
 1. **Adicionar Caminho do `psql`**:
    - Abra as Configurações do Sistema, vá para "Variáveis de Ambiente" e edite a variável `Path`.
    - Adicione o caminho do diretório `bin` do PostgreSQL, algo como `C:\Program Files\PostgreSQL\<versão>\bin`.
-   - *Inserir imagem 3 aqui*
+   - ![*Janelas Vaveis de ambienter*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/system_variables.png)
 
 ## Passo 3: Configurar o ngrok
 
