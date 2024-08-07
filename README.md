@@ -39,7 +39,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
    - ![*arquivo.exe*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_exe.png)
 
 2. **Autenticar ngrok**:
-   - No Prompt de Comando, autentique o ngrok com o token da sua conta:
+   - No Prompt de Comando, autentique o ngrok com o token da sua conta, é possível pegar o token na página [dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken) :
      ```sh
      ngrok authtoken <seu_token_ngrok>
      ```
