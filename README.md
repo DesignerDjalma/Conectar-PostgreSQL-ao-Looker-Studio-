@@ -5,7 +5,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
 ## Passo 1: Configurar o PostgreSQL
 
 1. **Editar o arquivo `postgresql.conf`**:
-   - Abra o arquivo `postgresql.conf` no diretório do PostgreSQL.
+   - Abra o arquivo `postgresql.conf` no diretório `data` do PostgreSQL, algo como `C:\Program Files\PostgreSQL\<versão>\bin`.
    - Adicione ou edite a linha para permitir conexões de qualquer endereço:
      ```conf
      listen_addresses = '*'
@@ -34,15 +34,16 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
 
 1. **Baixar e Instalar ngrok**:
    - Baixe ngrok em [ngrok.com](https://ngrok.com/), crie uma conta e valide a identidade.
+   - ![*site*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_site.png)
    - Abra o executável ngrok como administrador.
-   - *Inserir imagem 4 e 5 aqui*
+   - ![*arquivo.exe*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_exe.png)
 
 2. **Autenticar ngrok**:
    - No Prompt de Comando, autentique o ngrok com o token da sua conta:
      ```sh
      ngrok authtoken <seu_token_ngrok>
      ```
-   - *Inserir imagem 6 aqui*
+   - ![*seção de autenticação no site*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_token.png)
 
 3. **Expor a Porta do PostgreSQL**:
    - Execute o seguinte comando para expor a porta 5432 do PostgreSQL:
@@ -50,7 +51,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
      ngrok tcp 5432
      ```
    - ngrok fornecerá um endereço público, como `tcp://0.tcp.sa.ngrok.io:XXXXX`.
-   - *Inserir imagem 7 aqui*
+   - ![*porta pública pelo ngrok*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_connection.png)
 
 ## Passo 4: Conectar ao PostgreSQL
 
@@ -68,7 +69,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
 3. **Escolher "PostgreSQL"** como conector.
 4. **Inserir os Detalhes de Conexão**:
    - **Host**: O endereço público fornecido pelo ngrok (ex: `0.tcp.ngrok.io`).
-   - **Porta**: O número da porta fornecido pelo ngrok (ex: `16487`).
+   - **Porta**: O número da porta fornecido pelo ngrok (ex: `123456`).
    - **Nome do Banco de Dados**: O nome do seu banco de dados PostgreSQL.
    - **Nome de Usuário**: Seu usuário PostgreSQL.
    - **Senha**: A senha do seu usuário PostgreSQL.
