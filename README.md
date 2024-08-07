@@ -53,7 +53,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
    - ngrok fornecerá um endereço público, como `tcp://0.tcp.sa.ngrok.io:XXXXX`.
    - ![*porta pública pelo ngrok*](https://github.com/DesignerDjalma/Conectar-PostgreSQL-ao-Looker-Studio-/blob/main/ngrok_connection.png)
 
-## Passo 4: Conectar ao PostgreSQL
+## Passo 4: Testar a Conexão com o PostgreSQL
 
 1. **Usar `psql` para Conectar**:
    - No Prompt de Comando, use o endereço fornecido pelo ngrok para conectar-se ao PostgreSQL:
