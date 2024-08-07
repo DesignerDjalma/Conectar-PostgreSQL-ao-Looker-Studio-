@@ -5,7 +5,7 @@ Este guia ajudará você a configurar e expor seu banco de dados PostgreSQL loca
 ## Passo 1: Configurar o PostgreSQL
 
 1. **Editar o arquivo `postgresql.conf`**:
-   - Abra o arquivo `postgresql.conf` no diretório `data` do PostgreSQL, algo como `C:\Program Files\PostgreSQL\<versão>\bin`.
+   - Abra o arquivo `postgresql.conf` no diretório `data` do PostgreSQL, caminho completo `C:\Program Files\PostgreSQL\<versão>\bin\data\postgresql.conf`.
    - Adicione ou edite a linha para permitir conexões de qualquer endereço:
      ```conf
      listen_addresses = '*'
